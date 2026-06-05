@@ -18,3 +18,4 @@ res.out
 .DS_Store
 exp/
 resdb_job.ipynb
+resdbComparison-CR.ipynb
