@@ -21,7 +21,7 @@ g_total_thread_cnt = g_thread_cnt + g_rem_thread_cnt + g_send_thread_cnt;
 // Specify the number of servers or replicas
 #define NODE_CNT 8
 // Number of worker threads at primary. 
-#define THREAD_CNT 6 // This Should be the sum of following thread count + protocol specifig threads
+#define THREAD_CNT 5 // This Should be the sum of following thread count + protocol specifig threads
 #define WORKER_THREAD_CNT 1
 #define BATCH_THREAD_CNT 2
 #define CHECKPOINT_THREAD_CNT 1
@@ -41,7 +41,7 @@ g_total_thread_cnt = g_thread_cnt + g_rem_thread_cnt + g_send_thread_cnt;
 #define MESSAGE_PER_BUFFER 1
 
 // GeoBFT Setting 
-#define GBFT true
+#define GBFT false
 #define GBFT_CLUSTER_SIZE 4
 #define GBFT_CCM_THREAD_CNT 1
 
