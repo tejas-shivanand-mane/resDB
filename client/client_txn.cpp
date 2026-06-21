@@ -15,15 +15,15 @@ int32_t Inflight_entry::inc_inflight()
     {
         result = ++num_inflight_txns;
 
-        if (result <= 20 || result % 50 == 0)
-        {
-            printf("[RESDB INFLIGHT INC] inflight=%d max=%lu BATCH_SIZE=%d CLIENT_BATCH=%d\n",
-                   result,
-                   g_inflight_max,
-                   BATCH_SIZE,
-                   CLIENT_BATCH);
-            fflush(stdout);
-        }
+        // if (result <= 20 || result % 50 == 0)
+        // {
+        //     printf("[RESDB INFLIGHT INC] inflight=%d max=%lu BATCH_SIZE=%d CLIENT_BATCH=%d\n",
+        //            result,
+        //            g_inflight_max,
+        //            BATCH_SIZE,
+        //            CLIENT_BATCH);
+        //     fflush(stdout);
+        // }
 
     }
     else

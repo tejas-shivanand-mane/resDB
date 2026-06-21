@@ -126,32 +126,32 @@ void MessageThread::run()
             sbuf->force = true;
 
 
-        if (!ISSERVER)
-        {
-            printf("[RESDB CLIENT MSG DETAIL] node=%lu thd=%lu dest=%lu rtype=%d msg_size=%lu BATCH_SIZE=%d MSG_SIZE=%d\n",
-                g_node_id,
-                _thd_id,
-                dest_node_id,
-                msg->rtype,
-                msg->get_size(),
-                BATCH_SIZE,
-                MSG_SIZE);
-            fflush(stdout);
-        }
-        else
-        {
-            printf("[RESDB MSG DETAIL] sender_node=%lu is_server=%d thd=%lu dest=%lu rtype=%d msg_size=%lu send_ptr_after=%lu BATCH_SIZE=%d MSG_SIZE=%d\n",
-            g_node_id,
-            ISSERVER,
-            _thd_id,
-            dest_node_id,
-            msg->rtype,
-            msg->get_size(),
-            sbuf->ptr + msg->get_size(),
-            BATCH_SIZE,
-            MSG_SIZE);
-            fflush(stdout);
-        }
+        // if (!ISSERVER)
+        // {
+        //     printf("[RESDB CLIENT MSG DETAIL] node=%lu thd=%lu dest=%lu rtype=%d msg_size=%lu BATCH_SIZE=%d MSG_SIZE=%d\n",
+        //         g_node_id,
+        //         _thd_id,
+        //         dest_node_id,
+        //         msg->rtype,
+        //         msg->get_size(),
+        //         BATCH_SIZE,
+        //         MSG_SIZE);
+        //     fflush(stdout);
+        // }
+        // else
+        // {
+        //     printf("[RESDB MSG DETAIL] sender_node=%lu is_server=%d thd=%lu dest=%lu rtype=%d msg_size=%lu send_ptr_after=%lu BATCH_SIZE=%d MSG_SIZE=%d\n",
+        //     g_node_id,
+        //     ISSERVER,
+        //     _thd_id,
+        //     dest_node_id,
+        //     msg->rtype,
+        //     msg->get_size(),
+        //     sbuf->ptr + msg->get_size(),
+        //     BATCH_SIZE,
+        //     MSG_SIZE);
+        //     fflush(stdout);
+        // }
 
         msg->copy_to_buf(&(sbuf->buffer[sbuf->ptr]));
 
