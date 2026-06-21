@@ -124,6 +124,20 @@ void MessageThread::run()
 #endif
         if (msg->rtype == PBFT_CHKPT_MSG)
             sbuf->force = true;
+
+
+        if (!ISSERVER)
+        {
+            printf("[RESDB CLIENT MSG DETAIL] node=%lu thd=%lu dest=%lu rtype=%d msg_size=%lu BATCH_SIZE=%d MSG_SIZE=%d\n",
+                g_node_id,
+                _thd_id,
+                dest_node_id,
+                msg->rtype,
+                msg->get_size(),
+                BATCH_SIZE,
+                MSG_SIZE);
+            fflush(stdout);
+        }
         msg->copy_to_buf(&(sbuf->buffer[sbuf->ptr]));
 
         sbuf->cnt += 1;
