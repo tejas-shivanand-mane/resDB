@@ -19,7 +19,7 @@ g_total_thread_cnt = g_thread_cnt + g_rem_thread_cnt + g_send_thread_cnt;
 #ifndef _CONFIG_H_
 #define _CONFIG_H_
 // Specify the number of servers or replicas
-#define NODE_CNT 32
+#define NODE_CNT 16
 // Number of worker threads at primary. 
 #define THREAD_CNT 5 // This Should be the sum of following thread count + protocol specifig threads
 #define WORKER_THREAD_CNT 1
